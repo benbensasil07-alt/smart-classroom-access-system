@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Classroom Access System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <img src="{{ url_for('static', filename='assets/ctu-logo.svg') }}" alt="Cebu Technological University Logo" class="brand-logo" />
+          <div>
+            <p class="eyebrow">Cebu Technological University</p>
+            <h1>Smart Classroom Access & Emergency Egress</h1>
+          </div>
+        </div>
+      </header>
+
+      <main class="dashboard">
+        <section class="hero panel">
+          <div class="hero-copy">
+            <span class="status-badge">System Status: Online</span>
+            <h2>Dynamic QR + RFID access control for secure attendance and emergency response.</h2>
+            <p>
+              This prototype integrates RFID authentication, dynamic QR-code validation,
+              ESP32-based door control, and an emergency egress mechanism for classrooms and labs.
+            </p>
+            <div class="actions">
+              <button class="primary">Open Access Console</button>
+              <button class="secondary">Emergency Drill</button>
+            </div>
+          </div>
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <span>Active Rooms</span>
+              <strong>12</strong>
+            </div>
+            <div class="metric-card">
+              <span>Faculty Verified</span>
+              <strong>98%</strong>
+            </div>
+            <div class="metric-card">
+              <span>Emergency Response</span>
+              <strong>1.4s</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="grid two-col">
+          <div class="panel">
+            <h3>Core Modules</h3>
+            <ul class="feature-list">
+              <li>RFID card authentication for staff and students</li>
+              <li>Dynamic QR codes generated per session</li>
+              <li>ESP32 door control and sensor integration</li>
+              <li>Real-time logging and access event audit</li>
+              <li>Emergency egress unlock via button or smoke/fire sensor</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3>Emergency Egress Flow</h3>
+            <div class="flow-box">
+              <div class="flow-step">Emergency button</div>
+              <div class="arrow">↓</div>
+              <div class="flow-step">Fire/Smoke Sensor</div>
+              <div class="arrow">↓</div>
+              <div class="flow-step">IoT Controller (ESP32)</div>
+              <div class="arrow">↓</div>
+              <div class="split">
+                <div>Alarm</div>
+                <div>Door Unlock / Safe Egress</div>
+              </div>
+              <div class="arrow">↓</div>
+              <div class="flow-step">Notification to Admin</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="grid three-col">
+          <div class="panel small-panel">
+            <h3>Access Policy</h3>
+            <p>Faculty, students, and visitors are validated using RFID and QR code matching.</p>
+          </div>
+          <div class="panel small-panel">
+            <h3>Security</h3>
+            <p>Time-based tokens and AES encryption mitigate QR replay and cloning attacks.</p>
+          </div>
+          <div class="panel small-panel">
+            <h3>Monitoring</h3>
+            <p>Admin dashboard tracks door status, attendance, and emergency triggers in real time.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
